@@ -1,0 +1,2 @@
+import 'scrollreveal';
+import 'boxicons';

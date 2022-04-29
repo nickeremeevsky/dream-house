@@ -1,0 +1,151 @@
+@use 'sass:math';
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,regular,500,600,700);
+//</Подключаем шрифты>=======================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>==========================================================================================================
+:root {
+  --headerHeight: 3.5rem; // 56px
+
+  --firstColor: hsl(228, 66%, 53%);
+  --firstColorAlt: hsl(228, 66%, 47%);
+  --firstColorLight: hsl(228, 62%, 59%);
+  --firstColorLighten: hsl(228, 100%, 97%);
+  --secondColor: hsl(25, 83% 59%);
+  --titleColor: hsl(228, 57%, 28%);
+  --textColor: hsl(228, 15%, 50%);
+  --textColorLight: hsl(228, 12%, 75%);
+  --borderColor: hsl(228, 99% 98%);
+  --bodyColor: #fff;
+  --containerColor: #fff;
+
+  --zTooltip: 10;
+  --zFixed: 100;
+
+  @media screen and (min-width: 968px) {
+    --biggestFontSize: 4rem;
+    --h1FontSize: 2.25rem;
+    --h2FontSize: 1.5rem;
+    --h3FontSize: 1.25rem;
+    --normalFontSize: 1rem;
+    --smallFontSize: 0.875rem;
+    --smallerFontSize: 0.813rem;
+  }
+
+  --fontFamily: 'Yanone Kaffeesatz', sans-serif;
+
+  --biggestFontSize: 2.25rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallerFontSize: 0.75rem;
+
+  --fontMedium: 500;
+  --fontSemiBold: 600;
+}
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===========================================================================================
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fontFamily);
+  font-size: var(--normalFontSize);
+  background-color: var(--bodyColor);
+  color: var(--textColor);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--titleColor);
+  font-weight: var(--fontSemiBold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button {
+  font-family: var(--fontFamily);
+  outline: none;
+  border: none;
+}
+
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===========================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.section {
+  padding: 4.5rem 0 2rem;
+
+  &__title {
+    font-size: var(--h2FontSize);
+    margin-bottom: 1rem;
+    line-height: 140%;
+
+    span {
+      color: var(--secondColor);
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: var(--smallFontSize);
+    color: var(--secondColor);
+  }
+}
+
+.container {
+  max-width: 1024px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.main {
+  overflow: hidden;
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import 'header';
+@import 'footer';
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
