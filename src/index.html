@@ -4,7 +4,72 @@
   <body>
     @@include('html/header.html', {})
 
-    <main class="main"></main>
+    <main class="main">
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__data">
+            <h1 class="home__title">
+              Откройте для себя <br />
+              Наиболее подходящую <br />
+              Недвижимость
+            </h1>
+            <p class="home__description">
+              Построить дом, который вам подходят, очень легко, забудьте обо
+              всех трудностях - мы построим прекрасный дом для вас
+            </p>
+            <form action="#" class="home__search">
+              <box-icon name="map" type="solid"></box-icon>
+              <input
+                type="search"
+                placeholder="Поиск ..."
+                class="home__search-input"
+              />
+              <button class="button">Поиск</button>
+            </form>
+
+            <div class="home__value">
+              <div>
+                <h1 class="home__value-number">42 <span>&#127960; </span></h1>
+                <span class="home__value-description">
+                  Построенных <br />
+                  Дома
+                </span>
+              </div>
+              <div>
+                <h1 class="home__value-number">
+                  90
+                  <span
+                    >&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128102;</span
+                  >
+                </h1>
+                <span class="home__value-description">
+                  Счастливых <br />
+                  Клиентов
+                </span>
+              </div>
+              <div>
+                <h1 class="home__value-number">3 <span>&#127942;</span></h1>
+                <span class="home__value-description">
+                  Победы на международном <br />
+                  Конкурсе проектов
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="home__images">
+            <div class="home__orbe"></div>
+            <div class="home__img">
+              <img src="@img/home.jpeg" alt="home" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="logos section"></section>
+
+      <section class="section" id="popular"></section>
+    </main>
 
     @@include('html/footer.html', {})
 
