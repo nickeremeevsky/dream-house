@@ -268,4 +268,24 @@ button {
 .nav__button {
   display: none;
 }
+
+.logos {
+  &__container {
+    padding-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2rem;
+    justify-items: center;
+  }
+
+  &__img img {
+    height: 60px;
+    opacity: 0.4;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================
