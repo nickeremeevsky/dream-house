@@ -143,6 +143,7 @@ button {
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 @import 'header';
+@import 'swiper';
 @import 'footer';
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
@@ -182,7 +183,7 @@ button {
     margin-bottom: 2rem;
 
     i {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       color: var(--firstColor);
     }
 
@@ -215,6 +216,7 @@ button {
       display: flex;
       color: var(--textColorLight);
       font-size: var(--smallerFontSize);
+      margin-bottom: 1rem;
     }
   }
 
@@ -226,13 +228,15 @@ button {
 
   &__orbe {
     width: 265px;
-    height: 284px;
+    height: 265px;
     background: linear-gradient(
       180deg,
       hsl(0, 0%, 16%) 93%,
-      hsl(0, 0%, 67%) 100%
+      hsl(0, 0%, 27%) 100%
     );
-    border-radius: 135px 135px 0 0;
+    border: 1px solid var(--borderColor);
+    border-width: 1px 0 0 1px;
+    transform: rotate(45deg);
   }
 
   &__img {
@@ -288,4 +292,283 @@ button {
   }
 }
 
+.popular {
+  &__container {
+    padding: 1rem 0 5rem;
+  }
+
+  &__card {
+    width: 290px;
+    height: auto;
+    background-color: var(--containerColor);
+    padding: 0.5rem 0.5rem 1.5rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+    transition: 0.4s;
+
+    &:hover {
+      box-shadow: 0 17px 16px hsla(228, 66%, 45%, 0.1);
+    }
+  }
+
+  &__img {
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__data {
+    padding: 0 1rem 0 0.5rem;
+  }
+
+  &__price {
+    font-size: var(--h2FontSize);
+    color: var(--textColor);
+    margin-bottom: 0.25rem;
+
+    span {
+      color: var(--secondColor);
+    }
+  }
+
+  &__title {
+    font-size: var(--h2FontSize);
+    margin-bottom: 0.75rem;
+  }
+
+  &__description {
+    font-size: var(--normalFontSize);
+  }
+}
+
+.swiper {
+  &-button-prev::after,
+  &-button-next::after {
+    content: '';
+  }
+
+  &-button-next,
+  &-button-prev {
+    top: initial;
+    bottom: 0;
+    width: initial;
+    height: initial;
+    background-color: var(--containerColor);
+    border: 2px solid var(--textColorLight);
+    padding: 6px;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--firstColor);
+  }
+
+  &-button-prev {
+    left: calc(50% - 3rem);
+  }
+
+  &-button-next {
+    right: calc(50% - 3rem);
+  }
+}
+
+.value {
+  &__container {
+    row-gap: 3rem;
+  }
+
+  &__images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__orbe {
+    width: 266px;
+    height: 266px;
+    background-color: hsl(228, 24%, 97%);
+    border: 1px solid var(--borderColor);
+    border-width: 1px 0 0 1px;
+    transform: rotate(45deg);
+  }
+
+  &__img {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 125px 125px 12px 12px;
+    inset: 0;
+    margin: auto;
+    box-shadow: 0 16px 32px hsla(228, 66%, 25%, 0.25);
+  }
+
+  &__description {
+    font-size: var(--normalFontSize);
+    margin-bottom: 2rem;
+  }
+
+  &__accordion {
+    display: grid;
+    row-gap: 1.5rem;
+
+    &-item {
+      background-color: var(--bodyColor);
+      border: 2px solid var(--borderColor);
+      border-radius: 0.5rem;
+      padding: 1rem 0.75rem;
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &-icon {
+      padding: 5px;
+      border-radius: 0.25rem;
+      font-size: 18px;
+      margin-right: 0.75rem;
+      transition: 0.3s;
+    }
+
+    &-title {
+      font-size: var(--h2FontSize);
+    }
+
+    &-arrow {
+      display: inline-flex;
+      background-color: var(--firstColorLighten);
+      padding: 0.25rem;
+      color: var(--firstColor);
+      border-radius: 2px;
+      font-size: 10px;
+      margin-left: auto;
+      transition: 0.3s;
+
+      i {
+        transition: 0.4s;
+      }
+    }
+
+    &-description {
+      font-size: var(--h3FontSize);
+      padding: 1.25rem 2.5rem 0 2.75rem;
+    }
+
+    &-content {
+      overflow: hidden;
+      height: 0;
+      transition: all 0.25s ease;
+    }
+  }
+}
+
+.accordion-open {
+  box-shadow: 0 12px 32px hsla(228, 66%, 45%, 0.1);
+
+  & .value__accordion-icon {
+    box-shadow: 0 4px 4px hsla(228, 66%, 45%, 0.1);
+  }
+
+  & .value__accordion-arrow {
+    box-shadow: 0 2px 4px hsla(228, 66%, 45%, 0.1);
+
+    i {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.contact {
+  &__container {
+    row-gap: 2rem;
+  }
+
+  &__images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__orbe {
+    width: 266px;
+    height: 266px;
+    background-color: hsl(228, 24%, 97%);
+    border: 1px solid var(--borderColor);
+    border-width: 1px 0 0 1px;
+    transform: rotate(45deg);
+  }
+
+  &__img {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 125px 125px 12px 12px;
+    inset: 0;
+    margin: auto;
+    box-shadow: 0 16px 32px hsla(228, 66%, 25%, 0.25);
+  }
+
+  &__description {
+    font-size: var(--normalFontSize);
+    margin-bottom: 2.5rem;
+  }
+
+  &__card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 0.75rem;
+
+    &-box {
+      background-color: var(--bodyColor);
+      border: 2px solid var(--borderColor);
+      padding: 1.25rem 0.75;
+      border-radius: 0.5rem;
+      transition: 0.3s;
+
+      &:hover {
+        box-shadow: 0 8px 24px hsla(228, 66%, 45%, 0.1);
+      }
+    }
+
+    &-info {
+      display: flex;
+      align-items: flex-start;
+      column-gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    i {
+      padding: 6px;
+      background-color: var(--firstColorLighten);
+      border-radius: 6px;
+      font-size: 1.5rem;
+      color: var(--firstColor);
+    }
+
+    &-title {
+      font-size: var(--h2FontSize);
+    }
+
+    &-description {
+      font-size: var(--normalFontSize);
+    }
+
+    &-button {
+      font-size: var(--smallFontSize);
+      padding: 14px 0;
+      width: 100%;
+      border-radius: 0.25rem;
+      background: var(--firstColorLighten);
+      color: var(--firstColor);
+      font-weight: var(--fontSemiBold);
+      box-shadow: none;
+
+      &:hover {
+        background-color: var(--firstColor);
+        color: #fff;
+      }
+    }
+  }
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
