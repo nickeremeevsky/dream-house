@@ -828,11 +828,17 @@
 
                   <div>
                     <h3 class="contact__card-title">Телефон</h3>
-                    <p class="contact__card-description">123</p>
+                    <p class="contact__card-description">
+                      Позвони нам по телефону!
+                    </p>
                   </div>
                 </div>
-
-                <button class="button contact__card-button">Позвонить</button>
+                <a
+                  href="tel:+79121234567"
+                  title="Phone Call"
+                  class="button contact__card-button"
+                  >Позвонить</a
+                >
               </div>
 
               <div class="contact__card-box">
@@ -840,11 +846,19 @@
                   <i class="ri-telegram-fill"></i>
                   <div>
                     <h3 class="contact__card-title">Telegram</h3>
-                    <p class="contact__card-description">123</p>
+                    <p class="contact__card-description">
+                      Напиши нам в Telegram!
+                    </p>
                   </div>
                 </div>
 
-                <button class="button contact__card-button">Написать</button>
+                <a
+                  href="https://t.me/nickeremeevsky"
+                  title="Telegram"
+                  target="_blank"
+                  class="button contact__card-button"
+                  >Написать</a
+                >
               </div>
 
               <div class="contact__card-box">
@@ -853,11 +867,19 @@
 
                   <div>
                     <h3 class="contact__card-title">Видео-звонок</h3>
-                    <p class="contact__card-description">123</p>
+                    <p class="contact__card-description">
+                      Позвони нам по видео!
+                    </p>
                   </div>
                 </div>
 
-                <button class="button contact__card-button">Позвонить</button>
+                <a
+                  href="https://rocket.chat"
+                  title="Rocket Chat"
+                  target="_blank"
+                  class="button contact__card-button"
+                  >Позвонить</a
+                >
               </div>
 
               <div class="contact__card-box">
@@ -866,19 +888,42 @@
 
                   <div>
                     <h3 class="contact__card-title">Почта</h3>
-                    <p class="contact__card-description">123</p>
+                    <p class="contact__card-description">
+                      Напиши нам на электронную почту!
+                    </p>
                   </div>
                 </div>
-
-                <button class="button contact__card-button">Написать</button>
+                <a
+                  href="mailto:nick.eremeevsky@gmail.com"
+                  title="Email"
+                  target="_blank"
+                  class="button contact__card-button"
+                  >Написать</a
+                >
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <section class="subscribe section">
+        <div class="subscribe__container container">
+          <h1 class="subscribe__title">Начните работу с DreamHouse</h1>
+          <p class="subscribe__description">
+            Подпишитесь и найдите супер привлекательную цену от нас. Найдите
+            свое место жительства в ближайшее время!
+          </p>
+
+          <a href="#" class="button subscribe__button">Подписаться</a>
+        </div>
+      </section>
     </main>
 
     @@include('html/footer.html', {})
+
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-s-fill"></i>
+    </a>
 
     <script src="js/app.min.js"></script>
   </body>
